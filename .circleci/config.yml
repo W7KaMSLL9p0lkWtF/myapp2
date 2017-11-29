@@ -28,6 +28,12 @@ jobs:
       - store_artifacts:
           path: test-reports/
           destination: tr1
+  test:
+    working_directory: ~/circleci-demo-python-django
+    steps:
+      - run:
+          command: |
+            echo "test!"
 workflows:
   version: 2
   build_and_test:
